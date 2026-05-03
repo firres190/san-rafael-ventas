@@ -151,7 +151,7 @@ body{font-family:'Jost',sans-serif;background:var(--navy);color:var(--cream);min
 
   <!-- CTA -->
   <div class="cta-wrap">
-    <a href="https://san-rafael-app.vercel.app/" class="btn-main" id="main-btn">
+    <a href="https://san-rafael-app.vercel.app/?login=true" class="btn-main" id="main-btn">
       ACCEDER A MI JORNADA AHORA
     </a>
     <p class="redirect-note">Serás redirigido automáticamente en <span class="countdown-redirect" id="cd">10</span> segundos</p>
@@ -168,7 +168,7 @@ const timer = setInterval(() => {
   if (cdEl) cdEl.textContent = seconds;
   if (seconds <= 0) {
     clearInterval(timer);
-    window.location.href = 'https://san-rafael-app.vercel.app/';
+    window.location.href = 'https://san-rafael-app.vercel.app/?login=true';
   }
 }, 1000);
 
