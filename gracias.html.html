@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¡Bienvenido! — San Rafael Arcángel</title>
+<meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --gold:#C9A84C;--gold2:#DAA520;--gold3:#F5D060;--gold-dark:#8B6508;
+  --navy:#080E17;--navy2:#0F1C2E;--navy3:#162538;
+  --cream:#F0E6C8;--cream2:#D4B896;--cream3:#A08060;--white:#FDFBF7;
+}
+html,body{height:100%;overflow-x:hidden;}
+body{font-family:'Jost',sans-serif;background:var(--navy);color:var(--cream);min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem;text-align:center;position:relative;}
+
+/* BG */
+.bg{position:fixed;inset:0;z-index:0;}
+.bg-grad{position:absolute;inset:0;background:radial-gradient(ellipse 100% 80% at 50% 30%,#1E3050 0%,#080E17 70%);}
+.bg-glow{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,0.08) 0%,transparent 70%);top:-100px;left:50%;transform:translateX(-50%);}
+.particles{position:absolute;inset:0;}
+.par{position:absolute;border-radius:50%;animation:twinkle 3s infinite;}
+.par:nth-child(1){width:2px;height:2px;background:rgba(218,165,32,0.6);top:10%;left:15%;}
+.par:nth-child(2){width:3px;height:3px;background:rgba(218,165,32,0.4);top:20%;left:80%;animation-delay:.7s;}
+.par:nth-child(3){width:2px;height:2px;background:rgba(218,165,32,0.5);top:5%;left:50%;animation-delay:1.4s;}
+.par:nth-child(4){width:2px;height:2px;background:rgba(218,165,32,0.3);top:30%;left:90%;animation-delay:2s;}
+.par:nth-child(5){width:3px;height:3px;background:rgba(218,165,32,0.4);top:15%;left:30%;animation-delay:.5s;}
+@keyframes twinkle{0%,100%{opacity:.2;}50%{opacity:1;}}
+
+/* CONTENT */
+.content{position:relative;z-index:1;max-width:560px;width:100%;}
+
+/* SUCCESS ANIMATION */
+.success-circle{width:100px;height:100px;border-radius:50%;background:rgba(201,168,76,0.1);border:2px solid rgba(201,168,76,0.4);display:flex;align-items:center;justify-content:center;margin:0 auto 2rem;animation:scaleIn 0.6s ease both;}
+.success-circle::before{content:'';position:absolute;width:120px;height:120px;border-radius:50%;border:1px solid rgba(201,168,76,0.15);animation:pulse-ring 2s infinite;}
+.success-circle::after{content:'';position:absolute;width:140px;height:140px;border-radius:50%;border:1px solid rgba(201,168,76,0.07);animation:pulse-ring 2s infinite 0.5s;}
+@keyframes scaleIn{from{transform:scale(0);opacity:0;}to{transform:scale(1);opacity:1;}}
+@keyframes pulse-ring{0%{transform:scale(1);opacity:1;}100%{transform:scale(1.3);opacity:0;}}
+
+.checkmark{font-size:42px;animation:bounceIn 0.8s ease 0.3s both;}
+@keyframes bounceIn{0%{transform:scale(0);}60%{transform:scale(1.2);}100%{transform:scale(1);}}
+
+.ornament{display:flex;align-items:center;gap:12px;justify-content:center;margin:1.5rem 0;}
+.orn-line{height:1px;width:50px;background:linear-gradient(90deg,transparent,var(--gold));}
+.orn-line.r{background:linear-gradient(90deg,var(--gold),transparent);}
+.orn-diamond{width:5px;height:5px;background:var(--gold2);transform:rotate(45deg);}
+
+.eyebrow{font-size:11px;letter-spacing:4px;color:var(--gold);text-transform:uppercase;margin-bottom:1rem;animation:fadeUp 0.8s ease 0.4s both;}
+.title{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,8vw,52px);font-weight:300;color:var(--white);line-height:1.1;margin-bottom:1rem;animation:fadeUp 0.8s ease 0.5s both;}
+.title em{font-style:italic;color:var(--gold3);}
+.subtitle{font-size:16px;color:var(--cream2);line-height:1.7;font-weight:300;margin-bottom:2.5rem;animation:fadeUp 0.8s ease 0.6s both;}
+
+/* STEPS */
+.steps{background:rgba(255,255,255,0.03);border:1px solid rgba(201,168,76,0.15);border-radius:16px;padding:1.5rem;margin-bottom:2rem;text-align:left;animation:fadeUp 0.8s ease 0.7s both;}
+.steps-title{font-size:11px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:1.25rem;text-align:center;}
+.step{display:flex;align-items:flex-start;gap:1rem;padding:0.75rem 0;border-bottom:1px solid rgba(201,168,76,0.08);}
+.step:last-child{border-bottom:none;}
+.step-num{width:28px;height:28px;border-radius:50%;background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.3);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--gold2);flex-shrink:0;margin-top:1px;}
+.step-text{font-size:15px;color:var(--cream2);line-height:1.5;font-weight:300;}
+.step-text strong{color:var(--cream);font-weight:400;}
+
+/* VERSE */
+.verse-box{background:rgba(201,168,76,0.05);border-left:2px solid rgba(201,168,76,0.4);padding:1rem 1.25rem;border-radius:0 8px 8px 0;margin-bottom:2rem;text-align:left;animation:fadeUp 0.8s ease 0.8s both;}
+.verse-text{font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:var(--cream2);line-height:1.6;}
+.verse-ref{font-size:11px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-top:0.5rem;}
+
+/* CTA */
+.cta-wrap{animation:fadeUp 0.8s ease 0.9s both;}
+.btn-main{display:block;width:100%;padding:1.25rem 2rem;background:linear-gradient(135deg,var(--gold-dark),var(--gold),var(--gold2));border:none;border-radius:6px;cursor:pointer;font-family:'Jost',sans-serif;font-size:13px;font-weight:500;color:var(--navy);letter-spacing:3px;text-transform:uppercase;text-decoration:none;transition:transform 0.2s,box-shadow 0.2s;box-shadow:0 8px 32px rgba(201,168,76,0.25);margin-bottom:1rem;}
+.btn-main:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(201,168,76,0.35);}
+.redirect-note{font-size:13px;color:var(--cream3);}
+.countdown-redirect{color:var(--gold2);font-weight:500;}
+
+/* Angel */
+.angel-wrap{margin-bottom:0;animation:fadeUp 0.8s ease 0.2s both;}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+</style>
+</head>
+<body>
+
+<div class="bg">
+  <div class="bg-grad"></div>
+  <div class="bg-glow"></div>
+  <div class="particles">
+    <div class="par"></div><div class="par"></div><div class="par"></div>
+    <div class="par"></div><div class="par"></div>
+  </div>
+</div>
+
+<div class="content">
+
+  <!-- Angel SVG -->
+  <div class="angel-wrap">
+    <svg viewBox="0 0 80 80" width="70" height="70" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="40" cy="62" rx="22" ry="16" fill="#2D6A4F" opacity="0.9"/>
+      <path d="M22 55 Q40 75 58 55 Q50 70 40 72 Q30 70 22 55Z" fill="#1B4332"/>
+      <rect x="30" y="44" width="20" height="22" rx="4" fill="#F5EDD6"/>
+      <path d="M40 45 Q15 35 10 20 Q20 28 30 38Z" fill="#E8D5A3" opacity="0.9"/>
+      <path d="M40 45 Q65 35 70 20 Q60 28 50 38Z" fill="#E8D5A3" opacity="0.9"/>
+      <path d="M40 45 Q12 38 8 25 Q18 32 30 40Z" fill="#F5EDD6" opacity="0.6"/>
+      <path d="M40 45 Q68 38 72 25 Q62 32 50 40Z" fill="#F5EDD6" opacity="0.6"/>
+      <circle cx="40" cy="28" r="10" fill="#F5CBA7"/>
+      <path d="M31 24 Q33 16 40 15 Q47 16 49 24 Q46 18 40 18 Q34 18 31 24Z" fill="#C9A84C"/>
+      <circle cx="40" cy="22" r="13" fill="none" stroke="#DAA520" stroke-width="1.5" opacity="0.8"/>
+      <circle cx="37" cy="27" r="1.2" fill="#7B5E3A"/>
+      <circle cx="43" cy="27" r="1.2" fill="#7B5E3A"/>
+      <path d="M37 31 Q40 33 43 31" stroke="#7B5E3A" stroke-width="1" fill="none" stroke-linecap="round"/>
+      <line x1="55" y1="42" x2="58" y2="70" stroke="#DAA520" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="55" cy="42" r="3" fill="#DAA520"/>
+    </svg>
+  </div>
+
+  <!-- Success -->
+  <div class="success-circle">
+    <span class="checkmark">✦</span>
+  </div>
+
+  <p class="eyebrow">Compra confirmada</p>
+  <h1 class="title">¡Bienvenido a tu<br><em>jornada de sanación!</em></h1>
+  <p class="subtitle">Tu pago fue procesado exitosamente. San Rafael Arcángel te está esperando para comenzar estos 21 días juntos.</p>
+
+  <div class="ornament">
+    <div class="orn-line"></div><div class="orn-diamond"></div><div class="orn-line r"></div>
+  </div>
+
+  <!-- Pasos -->
+  <div class="steps">
+    <p class="steps-title">✦ Cómo acceder a tu jornada</p>
+    <div class="step">
+      <div class="step-num">1</div>
+      <p class="step-text">Haz clic en el botón de abajo para ir a la app de San Rafael Arcángel</p>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <p class="step-text">Selecciona <strong>"Ya soy miembro"</strong> e ingresa el correo con el que compraste</p>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <p class="step-text">Tu <strong>Día 1</strong> ya está desbloqueado y listo para escuchar. Cada día se desbloquea uno nuevo automáticamente</p>
+    </div>
+  </div>
+
+  <!-- Versículo -->
+  <div class="verse-box">
+    <p class="verse-text">"Yo soy Rafael, uno de los siete ángeles que estamos siempre presentes ante la gloria del Señor."</p>
+    <p class="verse-ref">Tobías 12:15</p>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-wrap">
+    <a href="https://san-rafael-app.vercel.app/" class="btn-main" id="main-btn">
+      ACCEDER A MI JORNADA AHORA
+    </a>
+    <p class="redirect-note">Serás redirigido automáticamente en <span class="countdown-redirect" id="cd">10</span> segundos</p>
+  </div>
+
+</div>
+
+<script>
+// Auto redirect countdown
+let seconds = 10;
+const cdEl = document.getElementById('cd');
+const timer = setInterval(() => {
+  seconds--;
+  if (cdEl) cdEl.textContent = seconds;
+  if (seconds <= 0) {
+    clearInterval(timer);
+    window.location.href = 'https://san-rafael-app.vercel.app/';
+  }
+}, 1000);
+
+// Stop auto redirect if user clicks button
+document.getElementById('main-btn').addEventListener('click', () => {
+  clearInterval(timer);
+});
+</script>
+
+</body>
+</html>
