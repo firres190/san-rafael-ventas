@@ -166,18 +166,16 @@ footer p{font-size:13px;color:var(--cream3);}
 .sp-name{color:var(--gold3);font-weight:500;}
 
 /* FLOATING COUNTDOWN BAR */
-.floating-bar{position:fixed;bottom:0;left:0;right:0;z-index:999;background:linear-gradient(135deg,#0F1C2E,#162538);border-top:1px solid rgba(201,168,76,0.3);padding:0.75rem 1rem;display:flex;align-items:center;justify-content:space-between;gap:0.75rem;box-shadow:0 -4px 24px rgba(0,0,0,0.5);}
-.floating-left{display:flex;align-items:center;gap:0.5rem;flex-shrink:0;}
-.floating-texts{display:flex;flex-direction:column;}
-.floating-title{font-size:10px;letter-spacing:1px;color:var(--gold);text-transform:uppercase;}
-.floating-note{font-size:10px;color:var(--cream3);display:none;}
-.floating-timer{display:flex;align-items:center;gap:4px;flex:1;justify-content:center;}
+.floating-bar{position:fixed;bottom:0;left:0;right:0;z-index:999;background:linear-gradient(135deg,#0F1C2E,#162538);border-top:1px solid rgba(201,168,76,0.3);padding:0.75rem 1rem;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:0.5rem;box-shadow:0 -4px 24px rgba(0,0,0,0.5);}
+.floating-left{display:flex;flex-direction:column;min-width:0;}
+.floating-title{font-size:10px;letter-spacing:1px;color:var(--gold);text-transform:uppercase;white-space:nowrap;}
+.floating-note{font-size:10px;color:var(--cream3);white-space:nowrap;}
+.floating-timer{display:flex;align-items:center;gap:3px;justify-content:center;}
 .time-block{display:flex;flex-direction:column;align-items:center;}
-.time-num{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;color:var(--gold3);line-height:1;min-width:32px;text-align:center;}
-.time-label{font-size:8px;letter-spacing:1px;color:var(--cream3);text-transform:uppercase;margin-top:1px;}
-.time-sep{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--gold);margin-bottom:10px;}
-.floating-cta{background:linear-gradient(135deg,var(--gold-dark),var(--gold2));border:none;border-radius:4px;padding:0.75rem 1.25rem;font-family:'Jost',sans-serif;font-size:12px;font-weight:500;color:var(--navy);letter-spacing:2px;text-transform:uppercase;cursor:pointer;text-decoration:none;flex-shrink:0;white-space:nowrap;}
-@media(min-width:480px){.floating-note{display:block;}}
+.time-num{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:var(--gold3);line-height:1;min-width:28px;text-align:center;}
+.time-label{font-size:7px;letter-spacing:1px;color:var(--cream3);text-transform:uppercase;margin-top:1px;}
+.time-sep{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--gold);margin-bottom:8px;}
+.floating-cta{background:linear-gradient(135deg,var(--gold-dark),var(--gold2));border:none;border-radius:4px;padding:0.75rem 1rem;font-family:'Jost',sans-serif;font-size:11px;font-weight:500;color:var(--navy);letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;text-decoration:none;white-space:nowrap;display:block;text-align:center;}
 
 /* URGENCY BADGE */
 .urgency-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(229,115,115,0.1);border:1px solid rgba(229,115,115,0.3);border-radius:30px;padding:0.4rem 1rem;font-size:12px;color:#EF9A9A;margin-bottom:1rem;}
@@ -551,11 +549,8 @@ footer p{font-size:13px;color:var(--cream3);}
 <!-- FLOATING COUNTDOWN BAR -->
 <div class="floating-bar">
   <div class="floating-left">
-    <div class="floating-icon">⚡</div>
-    <div class="floating-texts">
-      <p class="floating-title">Oferta expira en</p>
-      <p class="floating-note">Precio especial de lanzamiento .00</p>
-    </div>
+    <p class="floating-title">Oferta expira</p>
+    <p class="floating-note">Solo $7.00</p>
   </div>
   <div class="floating-timer">
     <div class="time-block"><div class="time-num" id="cd-h">02</div><div class="time-label">Hrs</div></div>
