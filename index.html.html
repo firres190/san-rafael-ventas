@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>San Rafael Arcángel — 21 Días de Sanación</title>
+<meta name="description" content="Una jornada espiritual de 21 días con San Rafael Arcángel. Oraciones profundas de sanación que tocan cuerpo y alma. Pago único de $7.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --gold:#C9A84C;--gold2:#DAA520;--gold3:#F5D060;--gold-dark:#8B6508;
+  --navy:#080E17;--navy2:#0F1C2E;--navy3:#162538;--navy4:#1E3050;
+  --cream:#F0E6C8;--cream2:#D4B896;--cream3:#A08060;--white:#FDFBF7;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Jost',sans-serif;background:var(--navy);color:var(--cream);overflow-x:hidden;font-size:17px;}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:4rem 2rem;text-align:center;position:relative;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 100% 80% at 50% 0%,#1E3050 0%,#080E17 65%);}
+.hero-glow{position:absolute;width:800px;height:800px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,0.08) 0%,transparent 70%);top:-300px;left:50%;transform:translateX(-50%);}
+.particles{position:absolute;inset:0;overflow:hidden;}
+.par{position:absolute;width:2px;height:2px;background:rgba(218,165,32,0.5);border-radius:50%;animation:twinkle 4s infinite;}
+.par:nth-child(1){top:10%;left:15%;animation-delay:0s;}
+.par:nth-child(2){top:20%;left:80%;animation-delay:0.7s;width:3px;height:3px;}
+.par:nth-child(3){top:5%;left:50%;animation-delay:1.4s;}
+.par:nth-child(4){top:30%;left:90%;animation-delay:2.1s;}
+.par:nth-child(5){top:15%;left:35%;animation-delay:0.5s;width:3px;height:3px;}
+.par:nth-child(6){top:8%;left:70%;animation-delay:1.8s;}
+@keyframes twinkle{0%,100%{opacity:0.2;}50%{opacity:1;}}
+.hero-content{position:relative;z-index:1;max-width:680px;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.3);border-radius:30px;padding:0.5rem 1.25rem;font-size:12px;letter-spacing:2px;color:var(--gold2);text-transform:uppercase;margin-bottom:2rem;animation:fadeUp 0.8s ease both;}
+.angel-icon{margin:0 auto 2rem;animation:fadeUp 0.8s ease 0.2s both;}
+.hero-eyebrow{font-size:13px;letter-spacing:4px;color:var(--gold);text-transform:uppercase;margin-bottom:1rem;animation:fadeUp 0.8s ease 0.3s both;}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(42px,8vw,72px);font-weight:300;color:var(--white);line-height:1.05;margin-bottom:1rem;animation:fadeUp 0.8s ease 0.4s both;}
+.hero-title em{font-style:italic;color:var(--gold3);}
+.hero-subtitle{font-size:clamp(16px,2.5vw,20px);color:var(--cream2);line-height:1.7;margin-bottom:2.5rem;font-weight:300;animation:fadeUp 0.8s ease 0.5s both;}
+.ornament{display:flex;align-items:center;gap:16px;justify-content:center;margin-bottom:2.5rem;animation:fadeUp 0.8s ease 0.6s both;}
+.orn-line{height:1px;width:60px;background:linear-gradient(90deg,transparent,var(--gold));}
+.orn-line.r{background:linear-gradient(90deg,var(--gold),transparent);}
+.orn-diamond{width:6px;height:6px;background:var(--gold2);transform:rotate(45deg);}
+.hero-cta{animation:fadeUp 0.8s ease 0.7s both;}
+.btn-cta{display:inline-block;padding:1.25rem 3rem;background:linear-gradient(135deg,var(--gold-dark),var(--gold),var(--gold2));border:none;border-radius:4px;cursor:pointer;font-family:'Jost',sans-serif;font-size:14px;font-weight:500;color:var(--navy);letter-spacing:3px;text-transform:uppercase;text-decoration:none;transition:transform 0.2s,box-shadow 0.2s;box-shadow:0 8px 32px rgba(201,168,76,0.25);}
+.btn-cta:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(201,168,76,0.35);}
+.price-display{margin-top:1.25rem;font-size:14px;color:var(--cream3);}
+.price-display strong{color:var(--gold3);font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;}
+.hero-guarantee{margin-top:1rem;font-size:13px;color:var(--cream3);display:flex;align-items:center;justify-content:center;gap:6px;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+
+/* PROBLEM SECTION */
+.section{padding:5rem 2rem;max-width:800px;margin:0 auto;}
+.section-center{text-align:center;}
+.section-eyebrow{font-size:11px;letter-spacing:4px;color:var(--gold);text-transform:uppercase;margin-bottom:1rem;}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,5vw,48px);font-weight:300;color:var(--white);line-height:1.2;margin-bottom:1.5rem;}
+.section-title em{font-style:italic;color:var(--gold3);}
+.section-text{font-size:17px;color:var(--cream2);line-height:1.8;font-weight:300;}
+.divider{width:100%;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.2),transparent);margin:0;}
+
+/* PAIN POINTS */
+.pain-grid{display:grid;gap:1px;background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.1);border-radius:12px;overflow:hidden;margin-top:3rem;}
+.pain-item{background:var(--navy2);padding:1.5rem 2rem;display:flex;align-items:flex-start;gap:1rem;}
+.pain-check{width:24px;height:24px;border-radius:50%;background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;font-size:12px;color:var(--gold);}
+.pain-text{font-size:16px;color:var(--cream2);line-height:1.6;font-weight:300;}
+
+/* SOLUTION */
+.solution-bg{background:radial-gradient(ellipse 80% 60% at 50% 50%,#0F1C2E 0%,#080E17 100%);padding:5rem 2rem;}
+.solution-inner{max-width:800px;margin:0 auto;text-align:center;}
+.verse-card{background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.2);border-radius:12px;padding:2rem 2.5rem;margin:3rem 0;position:relative;}
+.verse-card::before{content:'\201C';font-family:'Cormorant Garamond',serif;font-size:80px;color:rgba(201,168,76,0.15);position:absolute;top:-20px;left:20px;line-height:1;}
+.verse-text{font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic;color:var(--cream);line-height:1.7;}
+.verse-ref{font-size:12px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-top:1rem;}
+
+/* WHAT YOU GET */
+.features-bg{padding:5rem 2rem;background:var(--navy2);}
+.features-inner{max-width:800px;margin:0 auto;}
+.features-grid{display:grid;gap:1.5rem;margin-top:3rem;}
+.feature-card{background:var(--navy);border:1px solid rgba(201,168,76,0.12);border-radius:16px;padding:2rem;display:flex;gap:1.5rem;align-items:flex-start;transition:border-color 0.3s;}
+.feature-card:hover{border-color:rgba(201,168,76,0.3);}
+.feat-icon{width:52px;height:52px;border-radius:12px;background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.2);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;}
+.feat-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;color:var(--white);margin-bottom:0.5rem;}
+.feat-desc{font-size:15px;color:var(--cream2);line-height:1.7;font-weight:300;}
+
+/* JOURNEY */
+.journey-bg{padding:5rem 2rem;}
+.journey-inner{max-width:800px;margin:0 auto;}
+.journey-grid{display:grid;gap:1rem;margin-top:3rem;}
+.journey-week{background:var(--navy2);border:1px solid rgba(201,168,76,0.1);border-radius:12px;overflow:hidden;}
+.journey-week-header{padding:1.25rem 1.5rem;display:flex;align-items:center;gap:1rem;border-bottom:1px solid rgba(201,168,76,0.1);}
+.week-num{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:var(--gold3);line-height:1;min-width:40px;}
+.week-info{}
+.week-label{font-size:10px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:2px;}
+.week-title{font-size:16px;color:var(--cream);font-weight:400;}
+.journey-days{padding:1rem 1.5rem;display:flex;flex-wrap:wrap;gap:0.5rem;}
+.day-chip{background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.15);border-radius:20px;padding:0.35rem 0.875rem;font-size:13px;color:var(--cream2);}
+
+/* TESTIMONIALS */
+.testimonials-bg{background:var(--navy2);padding:5rem 2rem;}
+.testimonials-inner{max-width:800px;margin:0 auto;}
+.testimonials-grid{display:grid;gap:1.5rem;margin-top:3rem;}
+.testimonial-card{background:var(--navy);border:1px solid rgba(201,168,76,0.1);border-radius:16px;padding:2rem;}
+.testimonial-stars{color:var(--gold2);font-size:16px;margin-bottom:1rem;letter-spacing:2px;}
+.testimonial-text{font-family:'Cormorant Garamond',serif;font-size:19px;font-style:italic;color:var(--cream2);line-height:1.7;margin-bottom:1.25rem;}
+.testimonial-author{display:flex;align-items:center;gap:0.875rem;}
+.author-avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,rgba(201,168,76,0.2),rgba(201,168,76,0.1));border:1px solid rgba(201,168,76,0.3);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--gold2);}
+.author-name{font-size:14px;color:var(--cream);font-weight:400;}
+.author-location{font-size:12px;color:var(--cream3);}
+
+/* PRICE SECTION */
+.price-bg{padding:5rem 2rem;text-align:center;}
+.price-inner{max-width:560px;margin:0 auto;}
+.price-card{background:var(--navy2);border:1px solid rgba(201,168,76,0.25);border-radius:20px;padding:3rem 2.5rem;position:relative;overflow:hidden;}
+.price-card::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at top,rgba(201,168,76,0.06),transparent 60%);}
+.price-badge-top{display:inline-block;background:linear-gradient(135deg,var(--gold-dark),var(--gold2));color:var(--navy);font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:0.4rem 1.25rem;border-radius:20px;margin-bottom:2rem;font-weight:500;}
+.price-title{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:var(--white);margin-bottom:0.5rem;}
+.price-subtitle{font-size:14px;color:var(--cream3);margin-bottom:2rem;}
+.price-amount-big{font-family:'Cormorant Garamond',serif;font-size:80px;font-weight:300;color:var(--gold3);line-height:1;margin-bottom:0.25rem;}
+.price-once{font-size:14px;color:var(--cream3);letter-spacing:2px;margin-bottom:2rem;}
+.price-includes{text-align:left;margin-bottom:2rem;}
+.price-item{display:flex;align-items:center;gap:10px;padding:0.6rem 0;border-bottom:1px solid rgba(201,168,76,0.08);font-size:15px;color:var(--cream2);}
+.price-item:last-child{border-bottom:none;}
+.price-check{color:var(--gold2);font-size:14px;flex-shrink:0;}
+.guarantee-box{background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.2);border-radius:10px;padding:1.25rem;margin-bottom:2rem;display:flex;align-items:center;gap:1rem;text-align:left;}
+.guarantee-icon{font-size:28px;flex-shrink:0;}
+.guarantee-title{font-size:14px;color:var(--gold2);font-weight:500;margin-bottom:2px;}
+.guarantee-text{font-size:13px;color:var(--cream3);line-height:1.5;}
+.btn-cta-large{display:block;width:100%;padding:1.375rem 2rem;background:linear-gradient(135deg,var(--gold-dark),var(--gold),var(--gold2));border:none;border-radius:6px;cursor:pointer;font-family:'Jost',sans-serif;font-size:14px;font-weight:500;color:var(--navy);letter-spacing:3px;text-transform:uppercase;text-decoration:none;transition:transform 0.2s,box-shadow 0.2s;box-shadow:0 8px 32px rgba(201,168,76,0.3);margin-bottom:1rem;}
+.btn-cta-large:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(201,168,76,0.4);}
+.secure-text{font-size:12px;color:var(--cream3);display:flex;align-items:center;justify-content:center;gap:6px;}
+
+/* FAQ */
+.faq-bg{padding:5rem 2rem;background:var(--navy2);}
+.faq-inner{max-width:700px;margin:0 auto;}
+.faq-list{margin-top:3rem;display:flex;flex-direction:column;gap:1px;background:rgba(201,168,76,0.1);border-radius:12px;overflow:hidden;}
+.faq-item{background:var(--navy);padding:1.5rem 2rem;cursor:pointer;}
+.faq-q{font-size:16px;color:var(--cream);font-weight:400;display:flex;justify-content:space-between;align-items:center;gap:1rem;}
+.faq-icon{color:var(--gold);font-size:18px;flex-shrink:0;transition:transform 0.3s;}
+.faq-a{font-size:15px;color:var(--cream2);line-height:1.7;font-weight:300;margin-top:1rem;display:none;}
+.faq-item.open .faq-a{display:block;}
+.faq-item.open .faq-icon{transform:rotate(45deg);}
+
+/* FINAL CTA */
+.final-bg{padding:6rem 2rem;text-align:center;background:radial-gradient(ellipse 80% 60% at 50% 50%,#1E3050 0%,#080E17 100%);}
+.final-inner{max-width:600px;margin:0 auto;}
+
+/* FOOTER */
+footer{padding:2rem;text-align:center;border-top:1px solid rgba(201,168,76,0.1);}
+footer p{font-size:13px;color:var(--cream3);}
+
+/* Responsive */
+@media(min-width:600px){
+  .features-grid{grid-template-columns:1fr;}
+  .testimonials-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:480px){
+  .price-amount-big{font-size:64px;}
+  .feature-card{flex-direction:column;}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="particles">
+    <div class="par"></div><div class="par"></div><div class="par"></div>
+    <div class="par"></div><div class="par"></div><div class="par"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">✦ Voces Espirituales</div>
+    <div class="angel-icon">
+      <svg viewBox="0 0 120 120" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="60" cy="95" rx="33" ry="22" fill="#2D6A4F" opacity="0.9"/>
+        <path d="M33 82 Q60 110 87 82 Q75 102 60 105 Q45 102 33 82Z" fill="#1B4332"/>
+        <rect x="45" y="66" width="30" height="32" rx="6" fill="#F5EDD6"/>
+        <path d="M60 68 Q22 52 15 30 Q30 42 45 57Z" fill="#E8D5A3" opacity="0.9"/>
+        <path d="M60 68 Q98 52 105 30 Q90 42 75 57Z" fill="#E8D5A3" opacity="0.9"/>
+        <path d="M60 68 Q18 58 12 38 Q27 48 45 60Z" fill="#F5EDD6" opacity="0.6"/>
+        <path d="M60 68 Q102 58 108 38 Q93 48 75 60Z" fill="#F5EDD6" opacity="0.6"/>
+        <circle cx="60" cy="42" r="15" fill="#F5CBA7"/>
+        <path d="M47 36 Q50 24 60 22 Q70 24 73 36 Q69 27 60 27 Q51 27 47 36Z" fill="#C9A84C"/>
+        <circle cx="60" cy="33" r="19" fill="none" stroke="#DAA520" stroke-width="2" opacity="0.8"/>
+        <circle cx="56" cy="41" r="1.8" fill="#7B5E3A"/>
+        <circle cx="64" cy="41" r="1.8" fill="#7B5E3A"/>
+        <path d="M56 47 Q60 50 64 47" stroke="#7B5E3A" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <line x1="82" y1="63" x2="86" y2="100" stroke="#DAA520" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="82" cy="63" r="4" fill="#DAA520"/>
+      </svg>
+    </div>
+    <p class="hero-eyebrow">San Rafael Arcángel</p>
+    <h1 class="hero-title">21 Días de<br><em>Sanación Divina</em></h1>
+    <p class="hero-subtitle">Una jornada espiritual profunda donde cada día se desbloquea una nueva oración de sanación. Para tu cuerpo, tu alma y tu corazón.</p>
+    <div class="ornament"><div class="orn-line"></div><div class="orn-diamond"></div><div class="orn-line r"></div></div>
+    <div class="hero-cta">
+      <a href="https://pay.hotmart.com/B105571181L" class="btn-cta">COMENZAR MI JORNADA</a>
+      <div class="price-display">Acceso completo por solo <strong>$7.00</strong> — pago único</div>
+      <p class="hero-guarantee">🛡️ Garantía de devolución de 7 días</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PROBLEMA -->
+<div style="padding:5rem 2rem;max-width:800px;margin:0 auto;">
+  <div style="text-align:center;">
+    <p class="section-eyebrow">¿Te identificas con esto?</p>
+    <h2 class="section-title">Llevas demasiado tiempo<br><em>cargando este peso solo</em></h2>
+    <p class="section-text">Hay un tipo de sufrimiento que no aparece en ninguna radiografía. Que los médicos no pueden diagnosticar completamente. Que las pastillas no alcanzan a tocar. Es el sufrimiento que vive en el cuerpo y en el alma al mismo tiempo.</p>
+  </div>
+  <div class="pain-grid" style="margin-top:2.5rem;">
+    <div class="pain-item"><div class="pain-check">✦</div><p class="pain-text">Llevas meses o años con un dolor físico que no cede, que te ha robado el sueño y la alegría de vivir</p></div>
+    <div class="pain-item"><div class="pain-check">✦</div><p class="pain-text">Has orado, has creído, has esperado — y todavía no ves el cambio que pediste con tanta fe</p></div>
+    <div class="pain-item"><div class="pain-check">✦</div><p class="pain-text">Cargas el peso de ver sufrir a alguien que amas sin poder hacer nada para quitarle el dolor</p></div>
+    <div class="pain-item"><div class="pain-check">✦</div><p class="pain-text">Hay heridas del alma — palabras, pérdidas, traiciones — que todavía duelen aunque nadie más las vea</p></div>
+    <div class="pain-item"><div class="pain-check">✦</div><p class="pain-text">A veces te preguntas en silencio si Dios realmente te escucha, y esa pregunta da más miedo que el dolor mismo</p></div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- SOLUCIÓN -->
+<div class="solution-bg">
+  <div class="solution-inner">
+    <p class="section-eyebrow">La respuesta de Dios</p>
+    <h2 class="section-title">San Rafael fue enviado<br><em>específicamente para ti</em></h2>
+    <p class="section-text">En el libro de Tobías, San Rafael reveló su identidad con palabras que resuenan a través de los siglos. No es un ángel distante ni una figura simbólica. Es un mensajero activo, enviado por el Padre para sanar lo que el sufrimiento ha roto.</p>
+    <div class="verse-card">
+      <p class="verse-text">"Yo soy Rafael, uno de los siete ángeles que estamos siempre presentes ante la gloria del Señor, dispuestos a entrar a su presencia."</p>
+      <p class="verse-ref">Tobías 12:15</p>
+    </div>
+    <p class="section-text">Su nombre hebreo lo dice todo: <strong style="color:var(--gold3);">Rafa-El — Dios sana.</strong> No es una coincidencia que hayas llegado hasta aquí. Es una respuesta.</p>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- QUÉ INCLUYE -->
+<div class="features-bg">
+  <div class="features-inner">
+    <div style="text-align:center;">
+      <p class="section-eyebrow">Todo lo que recibes</p>
+      <h2 class="section-title">Una experiencia espiritual<br><em>completa e integral</em></h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feat-icon">🔓</div>
+        <div>
+          <p class="feat-title">21 Oraciones de Sanación</p>
+          <p class="feat-desc">Una oración nueva se desbloquea cada día — lunes a viernes cada semana. Cada oración tiene más de 40 minutos de profundidad espiritual creciente, con pasajes bíblicos completos y peticiones que tocan el cuerpo y el alma.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feat-icon">📖</div>
+        <div>
+          <p class="feat-title">Versículo Bíblico del Día</p>
+          <p class="feat-desc">Cada día comienza con un pasaje de las Sagradas Escrituras seleccionado específicamente para la oración de ese día. Una palabra de Dios para sostener tu corazón durante las horas que siguen.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feat-icon">🎵</div>
+        <div>
+          <p class="feat-title">Frecuencias de Sanación</p>
+          <p class="feat-desc">Cuatro frecuencias de sanación — 432Hz, 528Hz, 639Hz y 852Hz — para escuchar mientras oras, descansas o duermes. Cada frecuencia fue seleccionada por su efecto restaurador sobre el cuerpo y la mente.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feat-icon">📔</div>
+        <div>
+          <p class="feat-title">Diario Espiritual</p>
+          <p class="feat-desc">Un espacio sagrado para registrar lo que recibes en cada oración. Lo que sentiste, lo que Dios te habló, lo que quieres recordar. Tu jornada completa guardada y disponible siempre.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feat-icon">❤️</div>
+        <div>
+          <p class="feat-title">Mi Lista de Favoritos</p>
+          <p class="feat-desc">Guarda las oraciones que más te impactaron y regresas a ellas cuando las necesites. Tu biblioteca personal de encuentros con Dios, siempre a un toque de distancia.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feat-icon">♾️</div>
+        <div>
+          <p class="feat-title">Acceso de Por Vida</p>
+          <p class="feat-desc">Un solo pago de $7 y las 21 oraciones son tuyas para siempre. Sin suscripciones, sin cobros mensuales, sin sorpresas. Disponible en cualquier dispositivo, en cualquier momento.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- LA JORNADA -->
+<div class="journey-bg" style="padding:5rem 2rem;">
+  <div class="journey-inner">
+    <div style="text-align:center;">
+      <p class="section-eyebrow">Tu jornada de 21 días</p>
+      <h2 class="section-title">Cada semana va<br><em>más profundo que la anterior</em></h2>
+      <p class="section-text" style="margin-bottom:0;">La jornada fue diseñada como una progresión espiritual. No es una lista de oraciones — es un camino que te lleva gradualmente desde la apertura hasta la transformación.</p>
+    </div>
+    <div class="journey-grid">
+      <div class="journey-week">
+        <div class="journey-week-header">
+          <div class="week-num">1</div>
+          <div class="week-info">
+            <p class="week-label">Semana uno</p>
+            <p class="week-title">Apertura y Establecimiento de la Fe</p>
+          </div>
+        </div>
+        <div class="journey-days">
+          <span class="day-chip">Lunes · La Presencia Sanadora</span>
+          <span class="day-chip">Martes · Apertura del Corazón</span>
+          <span class="day-chip">Miércoles · Fe en la Espera</span>
+          <span class="day-chip">Jueves · Sanación del Cuerpo</span>
+          <span class="day-chip">Viernes · Paz Profunda</span>
+        </div>
+      </div>
+      <div class="journey-week">
+        <div class="journey-week-header">
+          <div class="week-num">2</div>
+          <div class="week-info">
+            <p class="week-label">Semana dos</p>
+            <p class="week-title">Sanación del Alma y la Memoria</p>
+          </div>
+        </div>
+        <div class="journey-days">
+          <span class="day-chip">Lunes · Restauración del Alma</span>
+          <span class="day-chip">Martes · Sanación de la Memoria</span>
+          <span class="day-chip">Miércoles · El Ángel Contigo</span>
+          <span class="day-chip">Jueves · Luz en la Oscuridad</span>
+          <span class="day-chip">Viernes · Fortaleza Divina</span>
+        </div>
+      </div>
+      <div class="journey-week">
+        <div class="journey-week-header">
+          <div class="week-num">3</div>
+          <div class="week-info">
+            <p class="week-label">Semana tres</p>
+            <p class="week-title">Intercesión y Gratitud</p>
+          </div>
+        </div>
+        <div class="journey-days">
+          <span class="day-chip">Lunes · Oración por la Familia</span>
+          <span class="day-chip">Martes · Sanación Completa</span>
+          <span class="day-chip">Miércoles · Confianza en Dios</span>
+          <span class="day-chip">Jueves · El Milagro Cercano</span>
+          <span class="day-chip">Viernes · Gratitud Profunda</span>
+        </div>
+      </div>
+      <div class="journey-week">
+        <div class="journey-week-header">
+          <div class="week-num">4</div>
+          <div class="week-info">
+            <p class="week-label">Semana cuatro</p>
+            <p class="week-title">Liberación y Victoria Final</p>
+          </div>
+        </div>
+        <div class="journey-days">
+          <span class="day-chip">Lunes · Liberación Interior</span>
+          <span class="day-chip">Martes · Sanación del Dolor</span>
+          <span class="day-chip">Miércoles · Fe que Mueve Montañas</span>
+          <span class="day-chip">Jueves · Presencia del Espíritu</span>
+          <span class="day-chip">Viernes · Victoria Espiritual</span>
+          <span class="day-chip">Sábado · Consagración y Cierre</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- TESTIMONIOS -->
+<div class="testimonials-bg">
+  <div class="testimonials-inner">
+    <div style="text-align:center;">
+      <p class="section-eyebrow">Lo que dice nuestra comunidad</p>
+      <h2 class="section-title">Vidas que han sido<br><em>tocadas por la gracia</em></h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Llevaba dos años con un dolor en la espalda que los médicos no podían explicar. Al tercer día de oración sentí algo que no puedo describir con palabras. Como si alguien pusiera una mano cálida exactamente donde dolía."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">M</div>
+          <div>
+            <p class="author-name">María Elena R.</p>
+            <p class="author-location">Ciudad de México, México</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Empecé a orar por mi esposo que tiene cáncer. No sé si el milagro vendrá como yo quiero, pero lo que sí sé es que desde que comencé esta jornada tengo una paz que no tenía antes. Una paz que no entiendo pero que sostengo."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">C</div>
+          <div>
+            <p class="author-name">Carmen L.</p>
+            <p class="author-location">Bogotá, Colombia</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Tengo 72 años y nunca había encontrado algo así. Cada mañana me levanto y lo primero que hago es abrir mi oración del día. Se ha convertido en el momento más importante de mi día."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">J</div>
+          <div>
+            <p class="author-name">José Antonio M.</p>
+            <p class="author-location">Lima, Perú</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Mi hija tiene una enfermedad autoinmune. Empecé a orar con estas oraciones por ella sin que ella lo supiera. En la segunda semana me llamó para decirme que sus análisis habían mejorado significativamente. Solo pudo ser Dios."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">R</div>
+          <div>
+            <p class="author-name">Rosa G.</p>
+            <p class="author-location">Buenos Aires, Argentina</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- PRECIO -->
+<div class="price-bg">
+  <div class="price-inner">
+    <p class="section-eyebrow" style="text-align:center;margin-bottom:2rem;">Comienza hoy mismo</p>
+    <div class="price-card">
+      <div class="price-badge-top">Acceso completo</div>
+      <h3 class="price-title">San Rafael Arcángel</h3>
+      <p class="price-subtitle">21 Días de Sanación Divina</p>
+      <div class="price-amount-big">$7</div>
+      <p class="price-once">PAGO ÚNICO · SIN SUSCRIPCIÓN</p>
+      <div class="price-includes">
+        <div class="price-item"><span class="price-check">✦</span>21 oraciones de sanación de 40+ minutos</div>
+        <div class="price-item"><span class="price-check">✦</span>Versículo bíblico del día</div>
+        <div class="price-item"><span class="price-check">✦</span>4 frecuencias de sanación (432Hz, 528Hz, 639Hz, 852Hz)</div>
+        <div class="price-item"><span class="price-check">✦</span>Diario espiritual personal</div>
+        <div class="price-item"><span class="price-check">✦</span>Lista de oraciones favoritas</div>
+        <div class="price-item"><span class="price-check">✦</span>Acceso de por vida desde cualquier dispositivo</div>
+      </div>
+      <div class="guarantee-box">
+        <div class="guarantee-icon">🛡️</div>
+        <div>
+          <p class="guarantee-title">Garantía de 7 días</p>
+          <p class="guarantee-text">Si en los primeros 7 días no sientes que esta jornada es para ti, te devolvemos tu dinero sin preguntas.</p>
+        </div>
+      </div>
+      <a href="https://pay.hotmart.com/B105571181L" class="btn-cta-large">COMENZAR MI JORNADA DE SANACIÓN</a>
+      <p class="secure-text">🔒 Pago seguro procesado por Hotmart</p>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- FAQ -->
+<div class="faq-bg">
+  <div class="faq-inner">
+    <div style="text-align:center;">
+      <p class="section-eyebrow">Preguntas frecuentes</p>
+      <h2 class="section-title">Todo lo que necesitas<br><em>saber antes de comenzar</em></h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">¿Cómo funciona exactamente? <span class="faq-icon">+</span></div>
+        <p class="faq-a">Después de tu pago en Hotmart recibirás acceso a la aplicación. Desde el primer día tendrás disponible la oración del Día 1. Cada 24 horas se desbloquea automáticamente la oración del día siguiente, hasta completar los 21 días.</p>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">¿Necesito instalar algo en mi teléfono? <span class="faq-icon">+</span></div>
+        <p class="faq-a">No. La aplicación funciona directamente desde el navegador de tu teléfono o computadora. Solo necesitas abrir el enlace que recibirás después de tu compra. Sin descargas, sin instalaciones.</p>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">¿Puedo orar por otra persona con estas oraciones? <span class="faq-icon">+</span></div>
+        <p class="faq-a">Absolutamente. Muchas personas utilizan estas oraciones para interceder por familiares enfermos, hijos, esposos o amigos. Las oraciones están diseñadas para incluir tanto a quien ora como a las personas por las que se ora.</p>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">¿Qué pasa si me pierdo un día? <span class="faq-icon">+</span></div>
+        <p class="faq-a">No hay problema. Los días desbloqueados permanecen disponibles siempre. Si un día no puedes orar, al día siguiente tendrás acceso tanto al día que te perdiste como al nuevo. Puedes avanzar a tu propio ritmo.</p>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">¿Las oraciones son para católicos solamente? <span class="faq-icon">+</span></div>
+        <p class="faq-a">Las oraciones tienen raíces en la tradición católica y la devoción a San Rafael Arcángel, pero cualquier cristiano que crea en el poder de la intercesión angélica y en la sanación divina puede beneficiarse profundamente de esta jornada.</p>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">¿Cómo funciona la garantía de 7 días? <span class="faq-icon">+</span></div>
+        <p class="faq-a">Si dentro de los primeros 7 días después de tu compra sientes que esta jornada no es lo que esperabas, contáctanos y te devolvemos el 100% de tu dinero. Sin preguntas, sin complicaciones. Tu confianza es lo más importante para nosotros.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- FINAL CTA -->
+<div class="final-bg">
+  <div class="final-inner">
+    <div class="ornament" style="margin-bottom:2rem;">
+      <div class="orn-line"></div><div class="orn-diamond"></div><div class="orn-line r"></div>
+    </div>
+    <p class="section-eyebrow">El momento es ahora</p>
+    <h2 class="section-title" style="margin-bottom:1.5rem;">No llegaste hasta aquí<br><em>por casualidad</em></h2>
+    <p class="section-text" style="margin-bottom:2.5rem;">San Rafael Arcángel está esperando acompañarte en este camino. La sanación que has estado buscando comienza con un primer paso. Este es ese paso.</p>
+    <a href="https://pay.hotmart.com/B105571181L" class="btn-cta">COMENZAR MI JORNADA — $7.00</a>
+    <p style="font-size:13px;color:var(--cream3);margin-top:1rem;">🛡️ Garantía de 7 días · 🔒 Pago seguro · ♾️ Acceso de por vida</p>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 Voces Espirituales · Todos los derechos reservados</p>
+</footer>
+
+<script>
+function toggleFaq(el) {
+  const isOpen = el.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!isOpen) el.classList.add('open');
+}
+</script>
+</body>
+</html>
