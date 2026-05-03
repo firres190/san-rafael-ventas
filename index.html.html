@@ -166,19 +166,18 @@ footer p{font-size:13px;color:var(--cream3);}
 .sp-name{color:var(--gold3);font-weight:500;}
 
 /* FLOATING COUNTDOWN BAR */
-.floating-bar{position:fixed;bottom:0;left:0;right:0;z-index:999;background:linear-gradient(135deg,#0F1C2E,#162538);border-top:1px solid rgba(201,168,76,0.3);padding:0.875rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;box-shadow:0 -4px 24px rgba(0,0,0,0.4);}
-.floating-left{display:flex;align-items:center;gap:0.75rem;flex:1;}
-.floating-icon{font-size:20px;flex-shrink:0;}
-.floating-texts{}
-.floating-title{font-size:12px;letter-spacing:1px;color:var(--gold);text-transform:uppercase;margin-bottom:1px;}
-.floating-note{font-size:11px;color:var(--cream3);}
-.floating-timer{display:flex;align-items:center;gap:6px;flex-shrink:0;}
+.floating-bar{position:fixed;bottom:0;left:0;right:0;z-index:999;background:linear-gradient(135deg,#0F1C2E,#162538);border-top:1px solid rgba(201,168,76,0.3);padding:0.75rem 1rem;display:flex;align-items:center;justify-content:space-between;gap:0.75rem;box-shadow:0 -4px 24px rgba(0,0,0,0.5);}
+.floating-left{display:flex;align-items:center;gap:0.5rem;flex-shrink:0;}
+.floating-texts{display:flex;flex-direction:column;}
+.floating-title{font-size:10px;letter-spacing:1px;color:var(--gold);text-transform:uppercase;}
+.floating-note{font-size:10px;color:var(--cream3);display:none;}
+.floating-timer{display:flex;align-items:center;gap:4px;flex:1;justify-content:center;}
 .time-block{display:flex;flex-direction:column;align-items:center;}
-.time-num{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:var(--gold3);line-height:1;min-width:36px;text-align:center;}
+.time-num{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;color:var(--gold3);line-height:1;min-width:32px;text-align:center;}
 .time-label{font-size:8px;letter-spacing:1px;color:var(--cream3);text-transform:uppercase;margin-top:1px;}
-.time-sep{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--gold);margin-bottom:12px;}
-.floating-cta{background:linear-gradient(135deg,var(--gold-dark),var(--gold2));border:none;border-radius:4px;padding:0.625rem 1.25rem;font-family:'Jost',sans-serif;font-size:11px;font-weight:500;color:var(--navy);letter-spacing:2px;text-transform:uppercase;cursor:pointer;text-decoration:none;flex-shrink:0;white-space:nowrap;}
-@media(max-width:480px){.floating-note{display:none;}.floating-title{font-size:11px;}}
+.time-sep{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--gold);margin-bottom:10px;}
+.floating-cta{background:linear-gradient(135deg,var(--gold-dark),var(--gold2));border:none;border-radius:4px;padding:0.75rem 1.25rem;font-family:'Jost',sans-serif;font-size:12px;font-weight:500;color:var(--navy);letter-spacing:2px;text-transform:uppercase;cursor:pointer;text-decoration:none;flex-shrink:0;white-space:nowrap;}
+@media(min-width:480px){.floating-note{display:block;}}
 
 /* URGENCY BADGE */
 .urgency-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(229,115,115,0.1);border:1px solid rgba(229,115,115,0.3);border-radius:30px;padding:0.4rem 1rem;font-size:12px;color:#EF9A9A;margin-bottom:1rem;}
@@ -191,19 +190,6 @@ footer p{font-size:13px;color:var(--cream3);}
 <div class=social-proof-bar id=sp-bar>
   <div class=sp-dot></div>
   <p class=sp-text id=sp-text><span class=sp-name>María González</span> accedió al programa <strong>hace 8 minutos</strong></p>
-</div>
-
-<!-- COUNTDOWN -->
-<div class=countdown-section>
-  <p class=countdown-label>⚡ Oferta especial disponible por tiempo limitado</p>
-  <div class=countdown-timer>
-    <div class=time-block><div class=time-num id=cd-h>23</div><div class=time-label>Horas</div></div>
-    <div class=time-sep>:</div>
-    <div class=time-block><div class=time-num id=cd-m>47</div><div class=time-label>Minutos</div></div>
-    <div class=time-sep>:</div>
-    <div class=time-block><div class=time-num id=cd-s>32</div><div class=time-label>Segundos</div></div>
-  </div>
-  <p class=countdown-note>Precio especial de lanzamiento: <strong>.00 pago único</strong> — precio regular 9.99</p>
 </div>
 
 <!-- HERO -->
@@ -624,32 +610,29 @@ if (el) el.style.transition = 'opacity 0.4s';
 setInterval(rotateSocialProof, 8000);
 
 // COUNTDOWN TIMER
+// COUNTDOWN — 2 horas desde primera visita
 function getEndTime() {
-  const stored = localStorage.getItem('sr_countdown_end');
-  if (stored) return parseInt(stored);
+  const stored = localStorage.getItem('sr_cd_end');
+  if (stored && parseInt(stored) > Date.now()) return parseInt(stored);
   const end = Date.now() + (2 * 60 * 60 * 1000);
-  localStorage.setItem('sr_countdown_end', end);
+  localStorage.setItem('sr_cd_end', end);
   return end;
 }
 
 const endTime = getEndTime();
+const pad = n => String(n).padStart(2, '0');
 
 function updateCountdown() {
-  const now = Date.now();
-  const diff = Math.max(0, endTime - now);
+  const diff = Math.max(0, endTime - Date.now());
   const h = Math.floor(diff / 3600000);
   const m = Math.floor((diff % 3600000) / 60000);
   const s = Math.floor((diff % 60000) / 1000);
-  const pad = n => String(n).padStart(2, '0');
   const hEl = document.getElementById('cd-h');
   const mEl = document.getElementById('cd-m');
   const sEl = document.getElementById('cd-s');
   if (hEl) hEl.textContent = pad(h);
   if (mEl) mEl.textContent = pad(m);
   if (sEl) sEl.textContent = pad(s);
-  if (diff === 0) {
-    localStorage.removeItem('sr_countdown_end');
-  }
 }
 updateCountdown();
 setInterval(updateCountdown, 1000);
