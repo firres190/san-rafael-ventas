@@ -17,7 +17,7 @@ html{scroll-behavior:smooth;}
 body{font-family:'Jost',sans-serif;background:var(--navy);color:var(--cream);overflow-x:hidden;font-size:17px;}
 
 /* HERO */
-.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:4rem 2rem;padding-top:8rem;text-align:center;position:relative;overflow:hidden;}
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:4rem 2rem;padding-top:6rem;text-align:center;position:relative;overflow:hidden;}
 .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 100% 80% at 50% 0%,#1E3050 0%,#080E17 65%);}
 .hero-glow{position:absolute;width:800px;height:800px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,0.08) 0%,transparent 70%);top:-300px;left:50%;transform:translateX(-50%);}
 .particles{position:absolute;inset:0;overflow:hidden;}
@@ -165,16 +165,20 @@ footer p{font-size:13px;color:var(--cream3);}
 .sp-text strong{color:var(--gold2);}
 .sp-name{color:var(--gold3);font-weight:500;}
 
-/* COUNTDOWN TIMER */
-.countdown-section{background:rgba(201,168,76,0.06);border-top:1px solid rgba(201,168,76,0.15);border-bottom:1px solid rgba(201,168,76,0.15);padding:1.5rem 2rem;text-align:center;}
-.countdown-label{font-size:12px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:0.75rem;}
-.countdown-timer{display:flex;align-items:center;justify-content:center;gap:1rem;}
+/* FLOATING COUNTDOWN BAR */
+.floating-bar{position:fixed;bottom:0;left:0;right:0;z-index:999;background:linear-gradient(135deg,#0F1C2E,#162538);border-top:1px solid rgba(201,168,76,0.3);padding:0.875rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;box-shadow:0 -4px 24px rgba(0,0,0,0.4);}
+.floating-left{display:flex;align-items:center;gap:0.75rem;flex:1;}
+.floating-icon{font-size:20px;flex-shrink:0;}
+.floating-texts{}
+.floating-title{font-size:12px;letter-spacing:1px;color:var(--gold);text-transform:uppercase;margin-bottom:1px;}
+.floating-note{font-size:11px;color:var(--cream3);}
+.floating-timer{display:flex;align-items:center;gap:6px;flex-shrink:0;}
 .time-block{display:flex;flex-direction:column;align-items:center;}
-.time-num{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:300;color:var(--gold3);line-height:1;min-width:60px;text-align:center;}
-.time-label{font-size:10px;letter-spacing:2px;color:var(--cream3);text-transform:uppercase;margin-top:4px;}
-.time-sep{font-family:'Cormorant Garamond',serif;font-size:36px;color:var(--gold);margin-bottom:16px;}
-.countdown-note{font-size:13px;color:var(--cream3);margin-top:0.75rem;}
-.countdown-note strong{color:var(--gold2);}
+.time-num{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:var(--gold3);line-height:1;min-width:36px;text-align:center;}
+.time-label{font-size:8px;letter-spacing:1px;color:var(--cream3);text-transform:uppercase;margin-top:1px;}
+.time-sep{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--gold);margin-bottom:12px;}
+.floating-cta{background:linear-gradient(135deg,var(--gold-dark),var(--gold2));border:none;border-radius:4px;padding:0.625rem 1.25rem;font-family:'Jost',sans-serif;font-size:11px;font-weight:500;color:var(--navy);letter-spacing:2px;text-transform:uppercase;cursor:pointer;text-decoration:none;flex-shrink:0;white-space:nowrap;}
+@media(max-width:480px){.floating-note{display:none;}.floating-title{font-size:11px;}}
 
 /* URGENCY BADGE */
 .urgency-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(229,115,115,0.1);border:1px solid rgba(229,115,115,0.3);border-radius:30px;padding:0.4rem 1rem;font-size:12px;color:#EF9A9A;margin-bottom:1rem;}
@@ -558,7 +562,26 @@ footer p{font-size:13px;color:var(--cream3);}
   </div>
 </div>
 
-<footer>
+<!-- FLOATING COUNTDOWN BAR -->
+<div class="floating-bar">
+  <div class="floating-left">
+    <div class="floating-icon">⚡</div>
+    <div class="floating-texts">
+      <p class="floating-title">Oferta expira en</p>
+      <p class="floating-note">Precio especial de lanzamiento .00</p>
+    </div>
+  </div>
+  <div class="floating-timer">
+    <div class="time-block"><div class="time-num" id="cd-h">02</div><div class="time-label">Hrs</div></div>
+    <div class="time-sep">:</div>
+    <div class="time-block"><div class="time-num" id="cd-m">00</div><div class="time-label">Min</div></div>
+    <div class="time-sep">:</div>
+    <div class="time-block"><div class="time-num" id="cd-s">00</div><div class="time-label">Seg</div></div>
+  </div>
+  <a href="https://pay.hotmart.com/B105666252X" class="floating-cta">ACCEDER</a>
+</div>
+
+<footer style="padding-bottom:5rem;">
   <p>© 2025 Voces Espirituales · Todos los derechos reservados</p>
 </footer>
 
@@ -604,7 +627,7 @@ setInterval(rotateSocialProof, 8000);
 function getEndTime() {
   const stored = localStorage.getItem('sr_countdown_end');
   if (stored) return parseInt(stored);
-  const end = Date.now() + (23 * 60 * 60 * 1000) + (47 * 60 * 1000) + (32 * 1000);
+  const end = Date.now() + (2 * 60 * 60 * 1000);
   localStorage.setItem('sr_countdown_end', end);
   return end;
 }
