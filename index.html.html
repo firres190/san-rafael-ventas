@@ -17,7 +17,7 @@ html{scroll-behavior:smooth;}
 body{font-family:'Jost',sans-serif;background:var(--navy);color:var(--cream);overflow-x:hidden;font-size:17px;}
 
 /* HERO */
-.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:4rem 2rem;text-align:center;position:relative;overflow:hidden;}
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:4rem 2rem;padding-top:8rem;text-align:center;position:relative;overflow:hidden;}
 .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 100% 80% at 50% 0%,#1E3050 0%,#080E17 65%);}
 .hero-glow{position:absolute;width:800px;height:800px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,0.08) 0%,transparent 70%);top:-300px;left:50%;transform:translateX(-50%);}
 .particles{position:absolute;inset:0;overflow:hidden;}
@@ -156,9 +156,51 @@ footer p{font-size:13px;color:var(--cream3);}
   .price-amount-big{font-size:64px;}
   .feature-card{flex-direction:column;}
 }
+
+/* SOCIAL PROOF BANNER */
+.social-proof-bar{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(8,14,23,0.95);border-bottom:1px solid rgba(201,168,76,0.2);padding:0.6rem 1.5rem;display:flex;align-items:center;justify-content:center;gap:0.75rem;backdrop-filter:blur(10px);}
+.sp-dot{width:8px;height:8px;border-radius:50%;background:#4CAF50;flex-shrink:0;animation:pulse-green 2s infinite;}
+@keyframes pulse-green{0%,100%{opacity:1;}50%{opacity:0.5;}}
+.sp-text{font-size:13px;color:var(--cream2);letter-spacing:0.5px;}
+.sp-text strong{color:var(--gold2);}
+.sp-name{color:var(--gold3);font-weight:500;}
+
+/* COUNTDOWN TIMER */
+.countdown-section{background:rgba(201,168,76,0.06);border-top:1px solid rgba(201,168,76,0.15);border-bottom:1px solid rgba(201,168,76,0.15);padding:1.5rem 2rem;text-align:center;}
+.countdown-label{font-size:12px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:0.75rem;}
+.countdown-timer{display:flex;align-items:center;justify-content:center;gap:1rem;}
+.time-block{display:flex;flex-direction:column;align-items:center;}
+.time-num{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:300;color:var(--gold3);line-height:1;min-width:60px;text-align:center;}
+.time-label{font-size:10px;letter-spacing:2px;color:var(--cream3);text-transform:uppercase;margin-top:4px;}
+.time-sep{font-family:'Cormorant Garamond',serif;font-size:36px;color:var(--gold);margin-bottom:16px;}
+.countdown-note{font-size:13px;color:var(--cream3);margin-top:0.75rem;}
+.countdown-note strong{color:var(--gold2);}
+
+/* URGENCY BADGE */
+.urgency-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(229,115,115,0.1);border:1px solid rgba(229,115,115,0.3);border-radius:30px;padding:0.4rem 1rem;font-size:12px;color:#EF9A9A;margin-bottom:1rem;}
+.urgency-dot{width:6px;height:6px;border-radius:50%;background:#EF9A9A;animation:pulse-green 1.5s infinite;}
 </style>
 </head>
 <body>
+
+<!-- SOCIAL PROOF BAR -->
+<div class=social-proof-bar id=sp-bar>
+  <div class=sp-dot></div>
+  <p class=sp-text id=sp-text><span class=sp-name>María González</span> accedió al programa <strong>hace 8 minutos</strong></p>
+</div>
+
+<!-- COUNTDOWN -->
+<div class=countdown-section>
+  <p class=countdown-label>⚡ Oferta especial disponible por tiempo limitado</p>
+  <div class=countdown-timer>
+    <div class=time-block><div class=time-num id=cd-h>23</div><div class=time-label>Horas</div></div>
+    <div class=time-sep>:</div>
+    <div class=time-block><div class=time-num id=cd-m>47</div><div class=time-label>Minutos</div></div>
+    <div class=time-sep>:</div>
+    <div class=time-block><div class=time-num id=cd-s>32</div><div class=time-label>Segundos</div></div>
+  </div>
+  <p class=countdown-note>Precio especial de lanzamiento: <strong>.00 pago único</strong> — precio regular 9.99</p>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -194,7 +236,7 @@ footer p{font-size:13px;color:var(--cream3);}
     <p class="hero-subtitle">Una jornada espiritual profunda donde cada día se desbloquea una nueva oración de sanación. Para tu cuerpo, tu alma y tu corazón.</p>
     <div class="ornament"><div class="orn-line"></div><div class="orn-diamond"></div><div class="orn-line r"></div></div>
     <div class="hero-cta">
-      <a href="https://pay.hotmart.com/B105571181L" class="btn-cta">COMENZAR MI JORNADA</a>
+      <a href="https://pay.hotmart.com/B105666252X" class="btn-cta">COMENZAR MI JORNADA</a>
       <div class="price-display">Acceso completo por solo <strong>$7.00</strong> — pago único</div>
       <p class="hero-guarantee">🛡️ Garantía de devolución de 7 días</p>
     </div>
@@ -249,7 +291,7 @@ footer p{font-size:13px;color:var(--cream3);}
         <div class="feat-icon">🔓</div>
         <div>
           <p class="feat-title">21 Oraciones de Sanación</p>
-          <p class="feat-desc">Una oración nueva se desbloquea cada día — lunes a viernes cada semana. Cada oración tiene más de 40 minutos de profundidad espiritual creciente, con pasajes bíblicos completos y peticiones que tocan el cuerpo y el alma.</p>
+          <p class="feat-desc">Una oración nueva se desbloquea cada día — lunes a viernes cada semana. Cada oración tiene 15 minutos de profundidad espiritual creciente, con pasajes bíblicos completos y peticiones que tocan el cuerpo y el alma.</p>
         </div>
       </div>
       <div class="feature-card">
@@ -442,7 +484,7 @@ footer p{font-size:13px;color:var(--cream3);}
       <div class="price-amount-big">$7</div>
       <p class="price-once">PAGO ÚNICO · SIN SUSCRIPCIÓN</p>
       <div class="price-includes">
-        <div class="price-item"><span class="price-check">✦</span>21 oraciones de sanación de 40+ minutos</div>
+        <div class="price-item"><span class="price-check">✦</span>21 oraciones de sanación de 15 minutos</div>
         <div class="price-item"><span class="price-check">✦</span>Versículo bíblico del día</div>
         <div class="price-item"><span class="price-check">✦</span>4 frecuencias de sanación (432Hz, 528Hz, 639Hz, 852Hz)</div>
         <div class="price-item"><span class="price-check">✦</span>Diario espiritual personal</div>
@@ -456,7 +498,7 @@ footer p{font-size:13px;color:var(--cream3);}
           <p class="guarantee-text">Si en los primeros 7 días no sientes que esta jornada es para ti, te devolvemos tu dinero sin preguntas.</p>
         </div>
       </div>
-      <a href="https://pay.hotmart.com/B105571181L" class="btn-cta-large">COMENZAR MI JORNADA DE SANACIÓN</a>
+      <a href="https://pay.hotmart.com/B105666252X" class="btn-cta-large">COMENZAR MI JORNADA DE SANACIÓN</a>
       <p class="secure-text">🔒 Pago seguro procesado por Hotmart</p>
     </div>
   </div>
@@ -511,7 +553,7 @@ footer p{font-size:13px;color:var(--cream3);}
     <p class="section-eyebrow">El momento es ahora</p>
     <h2 class="section-title" style="margin-bottom:1.5rem;">No llegaste hasta aquí<br><em>por casualidad</em></h2>
     <p class="section-text" style="margin-bottom:2.5rem;">San Rafael Arcángel está esperando acompañarte en este camino. La sanación que has estado buscando comienza con un primer paso. Este es ese paso.</p>
-    <a href="https://pay.hotmart.com/B105571181L" class="btn-cta">COMENZAR MI JORNADA — $7.00</a>
+    <a href="https://pay.hotmart.com/B105666252X" class="btn-cta">COMENZAR MI JORNADA — $7.00</a>
     <p style="font-size:13px;color:var(--cream3);margin-top:1rem;">🛡️ Garantía de 7 días · 🔒 Pago seguro · ♾️ Acceso de por vida</p>
   </div>
 </div>
@@ -526,6 +568,68 @@ function toggleFaq(el) {
   document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
   if (!isOpen) el.classList.add('open');
 }
+
+// SOCIAL PROOF ROTATION
+const nombres = [
+  {nombre:'María González', ciudad:'Ciudad de México', tiempo:'hace 3 minutos'},
+  {nombre:'Carmen López', ciudad:'Bogotá', tiempo:'hace 7 minutos'},
+  {nombre:'Rosa Martínez', ciudad:'Lima', tiempo:'hace 12 minutos'},
+  {nombre:'Ana Rodríguez', ciudad:'Buenos Aires', tiempo:'hace 18 minutos'},
+  {nombre:'Lucía Hernández', ciudad:'Santiago', tiempo:'hace 22 minutos'},
+  {nombre:'Isabel Flores', ciudad:'Guadalajara', tiempo:'hace 31 minutos'},
+  {nombre:'Teresa Vargas', ciudad:'Caracas', tiempo:'hace 45 minutos'},
+  {nombre:'Patricia Morales', ciudad:'Medellín', tiempo:'hace 1 hora'},
+  {nombre:'Esperanza Ruiz', ciudad:'Madrid', tiempo:'hace 2 horas'},
+  {nombre:'Graciela Torres', ciudad:'Monterrey', tiempo:'hace 15 minutos'},
+];
+
+let spIndex = 0;
+function rotateSocialProof() {
+  const sp = nombres[spIndex % nombres.length];
+  const el = document.getElementById('sp-text');
+  if (el) {
+    el.style.opacity = '0';
+    setTimeout(() => {
+      el.innerHTML = '<span class="sp-name">' + sp.nombre + ' (' + sp.ciudad + ')</span> accedió al programa <strong>' + sp.tiempo + '</strong>';
+      el.style.opacity = '1';
+    }, 400);
+  }
+  spIndex++;
+}
+el = document.getElementById('sp-text');
+if (el) el.style.transition = 'opacity 0.4s';
+setInterval(rotateSocialProof, 8000);
+
+// COUNTDOWN TIMER
+function getEndTime() {
+  const stored = localStorage.getItem('sr_countdown_end');
+  if (stored) return parseInt(stored);
+  const end = Date.now() + (23 * 60 * 60 * 1000) + (47 * 60 * 1000) + (32 * 1000);
+  localStorage.setItem('sr_countdown_end', end);
+  return end;
+}
+
+const endTime = getEndTime();
+
+function updateCountdown() {
+  const now = Date.now();
+  const diff = Math.max(0, endTime - now);
+  const h = Math.floor(diff / 3600000);
+  const m = Math.floor((diff % 3600000) / 60000);
+  const s = Math.floor((diff % 60000) / 1000);
+  const pad = n => String(n).padStart(2, '0');
+  const hEl = document.getElementById('cd-h');
+  const mEl = document.getElementById('cd-m');
+  const sEl = document.getElementById('cd-s');
+  if (hEl) hEl.textContent = pad(h);
+  if (mEl) mEl.textContent = pad(m);
+  if (sEl) sEl.textContent = pad(s);
+  if (diff === 0) {
+    localStorage.removeItem('sr_countdown_end');
+  }
+}
+updateCountdown();
+setInterval(updateCountdown, 1000);
 </script>
 </body>
 </html>
